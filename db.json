@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "name": "Usuario",
+      "lastName": "Prueba 1",
+      "IBAN": "ES32 1234 1324 1324",
+      "admin_id": 1,
+      "id": 1
+    },
+    {
+      "name": "Usuario",
+      "lastName": "Prueba 2",
+      "IBAN": "ES32 1234 1324 1324",
+      "admin_id": 1,
+      "id": 2
+    },
+    {
+      "name": "Usuario",
+      "lastName": "Prueba 3",
+      "IBAN": "ES32 1234 1324 1324",
+      "admin_id": 1,
+      "id": 3
+    },
+    {
+      "name": "Usuario",
+      "lastName": "Prueba 4",
+      "IBAN": "ES32 1234 1324 1324",
+      "admin_id": 1,
+      "id": 4
+    },
+    {
+      "name": "Usuario",
+      "lastName": "Prueba 5",
+      "IBAN": "ES32 1234 1324 1324",
+      "admin_id": 1,
+      "id": 5
+    },
+    {
+      "name": "Usuario",
+      "lastName": "de otro admin",
+      "IBAN": "9876 5432 1098 7654",
+      "admin_id": 2,
+      "id": 6
+    },
+    {
+      "name": "Otro Usuario",
+      "lastName": "de otro admin",
+      "IBAN": "9876 5432 1098 7654",
+      "admin_id": 2,
+      "id": 7
+    }
+  ],
+  "admins": [
+    {
+      "fullName": "Roberto Ruiz Martín",
+      "admin_id": 1
+    },
+    {
+      "fullName": "Roberto Martin Ruiz",
+      "admin_id": 2
+    }
+  ]
+}
