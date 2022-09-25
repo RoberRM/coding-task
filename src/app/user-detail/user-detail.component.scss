@@ -1,0 +1,79 @@
+.container {
+    order: 1;
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+        .title {
+            order: 1;
+            width: 100%;
+            text-align: center;
+            font-weight: bolder;
+            text-transform: uppercase;
+            font-size: large;
+        }
+        .defaultMessage {
+            order: 2;
+            flex: 1;
+            font-size: 3rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: lightgray;
+            margin-top: 10%;
+        }
+        .user-data {
+            order: 3;
+            flex: 1;
+            margin-top: 10px;
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+            .error {
+                color: red;
+            }
+            .buttons {
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+                margin-top: 15px;
+                .save {
+                    order: 1;
+                    flex: 1;
+                    background-color: #0D6EFD;
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+                .delete {
+                    order: 2;
+                    flex: 1;
+                    background-color: red;
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+            }
+            label {
+                font-weight: bolder;
+                font-size: 18px;
+            }
+            input {
+                margin-top: 5px;
+            }
+            .input-field {
+                margin-top: 10px;
+            }
+        }
+}

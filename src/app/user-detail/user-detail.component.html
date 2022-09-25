@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="title"> Datos de usuario </div>
+    <div *ngIf="showDefault" class="defaultMessage"> Selecciona un usuario para mostrar sus datos </div>
+    <div class="user-data" *ngIf="!showDefault">
+        <form autocomplete="off" [formGroup]="userForm" (ngSubmit)="saveData()">
+            <div class="input-field">
+                <label>Nombre</label>
+                <div>
+                    <input type="text"
+                            formControlName="userName"
+                            [class.is-invalid]="invalidName"
+                            placeholder="Nombre de usuario"
+                            required>
+                    <small *ngIf="invalidName" class="error">
+                        Debe introducir el nombre del usuario
+                    </small>
+                </div>
+            </div>
+          
+            <div class="input-field">
+                <label>Apellido</label>
+                <div>
+                    <input type="text"
+                            formControlName="userLastName"
+                            [class.is-invalid]="invalidLastname"
+                            placeholder="Apellidos"
+                            required>
+                    <small *ngIf="invalidLastname" class="error">
+                        Debe introducir los apellidos del usuario
+                    </small>
+                </div>
+            </div>
+          
+            <div class="input-field">
+              <label>IBAN</label>
+              <div>
+                <input type="text"
+                       formControlName="IBAN"
+                       [class.is-invalid]="invalidIban"
+                       placeholder="IBAN"
+                       required>
+                <small *ngIf="invalidIban" class="error">
+                    Debe introducir el IBAN
+                </small>
+            </div>
+
+            <div class="buttons">
+                <label>&nbsp;</label>
+                <div *ngIf="user && user.admin_id === admin_id">
+                    <div class="delete" (click)="deleteData()">
+                        Eliminar
+                    </div>
+                </div>
+                <div *ngIf="(user && user.admin_id === admin_id) || !user">
+                    <button type="submit" class="save">
+                        Guardar
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="user && user.admin_id !== admin_id">
+                No tiene permisos para realizar esta operación
+            </div>
+</div>
