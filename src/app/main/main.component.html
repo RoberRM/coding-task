@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="left-column">
+        <div class="user-list">
+            <span class="title"><button class="logout" (click)="logout()">Logout</button><span class="userLogged">{{ loggedUser }}</span><span *ngIf="currentUser['photoUrl']"><img src="{{currentUser['photoUrl']}}"></span></span>
+            <span class="users" *ngFor="let user of users" (click)="openUserDetails(user)">
+                <span>{{ user.name }} {{ user.lastName }}</span>
+            </span>
+        </div>
+        <div class="btn">
+            <button class="addUser" (click)="addNewUser()"> Añadir usuario </button>
+        </div>
+    </div>
+    <div class="user-data"><app-user-detail [user]="selectedUser" [users]="users" [admin_id]="admin.admin_id" [reset_form]="reset_form" (saveNewUser)="saveNewUSer($event)" (deleteUser)="deleteUSer($event)"></app-user-detail></div>
+</div>

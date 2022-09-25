@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 98vh;
+    .left-column {
+        order: 1;
+        flex: 0.4;
+        display: flex;
+        flex-direction: column;
+        .user-list {
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+            .title {
+                order: 1;
+                width: 100%;
+                text-align: center;
+                font-weight: bolder;
+                text-transform: uppercase;
+                font-size: large;
+                text-overflow: ellipsis;
+                display: flex;
+                flex-direction: row;
+                .logout {
+                    position: fixed;
+                    right: 0px;
+                    padding: 10px;
+                    border: none;
+                    color: white;
+                    background-color: darkgrey;
+                    cursor: pointer;
+                }
+                .userLogged {
+                    order: 2;
+                    flex: 1;
+                    max-width: 80%;
+                }
+                span {
+                    order: 2;
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+            .users {
+                order: 2;
+                cursor: pointer;
+                text-align: center;
+                margin-top: 15px;
+                border: black 1px solid;
+                border-radius: 5px;
+                width: 50%;
+                align-self: center;
+                span {
+                    font-weight: bolder;
+                    font-size: 12px;
+                }
+            }
+        }
+        .btn {
+            order: 3;
+            text-transform: uppercase;
+            align-self: center;
+            .addUser {
+                background-color: #0D6EFD;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+    .user-data {
+        order: 2;
+        flex: 1;
+    }
+}
+.mat-form-field {
+    margin-right: 8px;
+  }
